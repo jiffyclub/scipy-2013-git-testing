@@ -1,35 +1,33 @@
 # Local Version Control
 ----
 
-**Based on materials by Katy Huff, Anthony Scopatz, Joshua R. Smith, and Sri 
-Hari Krishna Narayanan**
+## Example: Wolfman
 
-## Example: A Slide Deck for a Presentation
-
-Imagine you have two computers: the first is a big, powerful desktop machine 
-with a big, dual monitor setup. The second is a tiny lightweight netbook you 
-take with you when you travel. Imagine also that you have a presentation at a 
-conference overseas. You know that no matter how "finished" you think you are 
-with your slide deck, inevitably you will realize you need to add an exta figure 
-or recalculate some data AFTER leaving the country and your main desktop 
-workstation. How can you be sure your slide deck, data, and the programs you've 
-written are synchronized between your two machines? How can you be sure that 
-every little change you've made on your netbook is reflected on your desktop? 
-What happens if you start making changes on your slide deck, only to realize you 
-need to drop back to the slide deck you had five days ago?
+My friend Lupine Wolfe worked hard on an important project all day. He finished 
+before dinner time, relieved to be ready for the deadline in the morning. The 
+sun set, the full moon rose, and in the morning Lupine awoke with no memory of 
+the previous evening. He sat down at his computer and disciovered to his horror 
+that overnight, while transformed as a werewolf, he had replaced all of the code 
+with nonsense. But, Lupine breathed a sigh of relief, because he had been using 
+version control.  He was able to examine the record of his actions overnight and 
+execute a simple command that reverted the code to the state it was in before 
+the moon rose. 
 
 ## git : What is Version Control ?
 
-Very briefly, version control is a way to keep a backup of changing
-files, to store a history of those changes, and most importantly to
-allow many people in a collaboration to make changes to the same files
-concurrently. There are a lot of verson control systems. Wikipedia
+Very briefly, version control is a way to 
+
+- keep a backup of changing files
+- store a history of those changes
+- and manage merging of changes in versions with different change sets.
+
+There are a lot of verson control systems. Wikipedia
 provides both a nice vocabulary list and a fairly complete table of some
 popular version control systems and their equivalent commands.
 
 Today, we'll be using git. Git is an example of a distributed version
 control system, distinct from centralized verson control systems. I'll
-make the distinction clear later, but for now, the table below will
+make the distinction clear later, but for now, the list below will
 suffice.
 
 Version Control System Tool Options
@@ -97,20 +95,23 @@ as their descriptions.
 
     See 'git help <command>' for more information on a specific command.
 
-## git config : Controls the behavior of git
+## git config : Control the behavior of git
 
      $ git config --global user.name "YOUR NAME"
      $ git config --global user.email "YOUR EMAIL"
+     $ git config --global core.editor "nano"
+     $ git config --global color.ui "auto"
      
 ## git init : Creating a Local Repository
 
-To keep track of numerous versions of your work without saving numerous
-copies, you can make a local repoitory for it on your computer. What git
-does is to save the first version, then for each subsequent version it
-saves only the changes. That is, git only records the difference between
-the new version and the one before it. With this compact information,
-git is able to recreate any version on demand by adding the changes to
-the original in order up to the version of interest.
+To keep track of numerous versions of your work without saving numerous copies, 
+you can make a local **repository** for it on your computer.
+
+What git does is to save 
+the first version, then for each subsequent version it records the difference 
+between the new version and the one before it. With this compact information, 
+git is able to recreate any version on demand by adding the changes to the 
+original in order up to the version of interest.  
 
 To create your own local (on your own machine) repository, you must
 initialize the repository with the infrastructure git needs in order to
@@ -141,21 +142,7 @@ description. You can describe your repository by opening the description
 file and replacing the text with a name for the repository. Mine will be
 called "Reproducible Science". You may call yours anything you like.
 
-    $ kate description &
-
-Step 4 : Applications sometimes create files that are not needed. For
-example, kate creates a temporary file called 'filename~' when you edit
-the file 'filename'. You can ask git to ignore such files by editing
-the file '.git/info/exclude'. Edit the file to ignore files the end with '~'.
-
-     git ls-files --others --exclude-from=.git/info/exclude
-    # Lines that start with '#' are comments.
-    # For a project mostly in C, the following would be a good set of
-    # exclude patterns (uncomment them if you want to use them):
-    # *.[oa]
-    # *~
-    
-## git add : Adding a File To Version Control
+## git add : Staging Files
 
 For the git repository to know which files within this directory you
 would like to keep track of, you must add them. First, you'll need to
@@ -165,7 +152,7 @@ create one, then we'll learn the **git add** command.
 
 Step 1 : Create a file to add to your repository.
 
-    $ kate readme.rst &
+    $ nano readme.rst &
 
 Step 2 : Inform git that you would like to keep track of future changes
 in this file.
@@ -193,8 +180,7 @@ different about them in the terminal, try:
     #       new file:   readme.rst
     #
 
-The null result means that you're up to date with the current version of
-the repository online. This result indicates that the current difference
+The result above indicates that the current difference
 between the repository HEAD (which, so far, is empty) and your
 good\_science directory is this new readme.rst file.
 
@@ -213,9 +199,13 @@ In the same way that it is wise to often save a document that you are
 working on, so too is it wise to save numerous revisions of your code.
 More frequent commits increase the granularity of your **undo** button.
 
-**ADVICE: Good commit messages**
+There are no hard and fast rules, but good commits are atomic: they are the 
+smallest change that remains meaningful. 
 
-There are no hard and fast rules, but good commits are atomic: they are the smallest change that remain meaningful. A good commit message usually contains a one-line description followed by a longer explanation if necessary.
+**ADVICE: Write good commit messages**
+
+A good commit message usually contains a one-line description followed by a 
+longer explanation if necessary.
 
 [Our repo](https://github.com/USERNAME/boot-camps/commits/YYYY-MM-PLACE) has some good commit messages.
 
