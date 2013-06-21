@@ -6,12 +6,14 @@
 My friend Lupine Wolfe worked hard on an important project all day. He finished 
 before dinner time, relieved to be ready for the deadline in the morning. The 
 sun set, the full moon rose, and in the morning Lupine awoke with no memory of 
-the previous evening. He sat down at his computer and disciovered to his horror 
+the previous evening. He sat down at his computer and discovered to his horror 
 that overnight, while transformed as a werewolf, he had replaced all of the code 
 with nonsense. But, Lupine breathed a sigh of relief, because he had been using 
 version control.  He was able to examine the record of his actions overnight and 
-execute a simple command that reverted the code to the state it was in before 
+execute one simple command that reverted the code to the state it was in before 
 the moon rose. 
+
+What would happen to your code on a full moon?
 
 ## git : What is Version Control ?
 
