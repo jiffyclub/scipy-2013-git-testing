@@ -242,21 +242,16 @@ Step 2 : Stage it for the snapshot (git add)
 Step 3 : Commit the snapshot (git commit)
 Step 4 : Add a meaningful commit message.
 
-Four steps is a lot of steps. Command line flags can cut this way down. 
+Four steps is a lot of steps. Command line flags can cut this way down. Some 
+useful flags for git commit include  :
 
-## git commit -m : Messages on the Command Line
+   -m : add a commit message from the command line
+   -a : automatically stage files that have been modified or deleted
+   -F : add a commit message from a file
+   --status : include the output of git status in the commit message
+   --amend : fix the commit message at the repository tip
 
 **ADVICE: Write good commit messages**
-
-With the -m flag, you can append a commit message to the repository. A good commit message usually contains a one-line description followed by a 
-longer explanation if necessary.
-
-
-## git commit -a: Automatic Staging
-
-To automatically commit everything that has ever previously been added to the 
-repository, including changes not staged for commit by 
-git add, type git commit with the -a flag. 
 
 ## Exercise : Commit in One Step
 
@@ -265,6 +260,7 @@ Step 1 : Edit your readme file to tell us whose it is.
 Step 2 : Add, Commit, and append your log Message.
 
 $ git commit -am "This is Katy's readme."
+
 
 ## git diff : Viewing the Differences
 
@@ -333,7 +329,7 @@ There are some useful flags for this command, such as
 ## git reset : Unstaging a staged file
     git reset filename     (opposite of 'git add filename')
 
-## git checkout : Discardind unstaged modifications (git checkout has other purposes)
+## git checkout : Discarding unstaged modifications (git checkout has other purposes)
     git checkout -- filename     
     
 ## git rm : Removing s file
