@@ -198,27 +198,73 @@ More frequent commits increase the granularity of your **undo** button.
 There are no hard and fast rules, but good commits are atomic: they are the 
 smallest change that remains meaningful. 
 
-**ADVICE: Write good commit messages**
-
-A good commit message usually contains a one-line description followed by a 
-longer explanation if necessary.
-
-[Our repo](https://github.com/USERNAME/boot-camps/commits/YYYY-MM-PLACE) has some good commit messages.
-
 ### Exercise : Commit Your Changes
 
-Step 1 : Commit the file you've added to your repository.
+Step 1 : Commit the staged changes of the file you've added to your repository.
 
-    $ git commit -am "This is the first commit. It adds a readme file."
-    [master (root-commit) 1863aef] This is the first commit. It adds a readme file.
-     1 files changed, 2 insertions(+), 0 deletions(-)
-     create mode 100644 readme.rst
+    $ git commit
 
-Step 2 : Admire your work.
+
+Step 2 : Add a commit message. Git will send you to your preferred text editor. 
+Create a message, then save and exit.
+
+Step 3 : Admire your work.
 
     $ git status
     # On branch master
     nothing to commit (working directory clean)
+
+Now, one revision is great, but lots are better. 
+
+So far, we've learned that the workflow should be :
+
+- make changes
+- git add the files you want to stage for a commit
+- git commit those files
+- fill out the message
+
+### Exercise : Stage and Commit New Changes
+
+Step 1 : Edit your readme file. It should say something like :
+
+
+```
+
+=========
+Welcome
+=========
+
+This is my readme file.
+
+```
+
+Step 2 : Stage it for the snapshot (git add) 
+Step 3 : Commit the snapshot (git commit)
+Step 4 : Add a meaningful commit message.
+
+Four steps is a lot of steps. Command line flags can cut this way down. 
+
+## git commit -m : Messages on the Command Line
+
+**ADVICE: Write good commit messages**
+
+With the -m flag, you can append a commit message to the repository. A good commit message usually contains a one-line description followed by a 
+longer explanation if necessary.
+
+
+## git commit -a: Automatic Staging
+
+To automatically commit everything that has ever previously been added to the 
+repository, including changes not staged for commit by 
+git add, type git commit with the -a flag. 
+
+## Exercise : Commit in One Step
+
+Step 1 : Edit your readme file to tell us whose it is.
+
+Step 2 : Add, Commit, and append your log Message.
+
+$ git commit -am "This is Katy's readme."
 
 ## git diff : Viewing the Differences
 
@@ -255,8 +301,8 @@ To see only the differences in a certain path, try:
 
     $ git diff HEAD -- [path]
 
-To see what IS staged for commit (that is, what will be committed if you
-type git commit without the -a flag), you can try :
+To see what IS staged for commit
+you can try :
 
     $ git diff --cached
 
