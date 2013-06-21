@@ -1,5 +1,4 @@
 # Local Version Control
-----
 
 ## Example: Wolfman
 
@@ -241,10 +240,12 @@ This is my readme file.
 ```
 
 Step 2 : Stage it for the snapshot (git add) 
+
 Step 3 : Commit the snapshot (git commit)
+
 Step 4 : Add a meaningful commit message.
 
-Four steps is a lot of steps. Command line flags can cut this way down. Some 
+**Four steps is a lot of steps!!** Command line flags can cut this way down. Some 
 useful flags for git commit include  :
 
    -m : add a commit message from the command line
