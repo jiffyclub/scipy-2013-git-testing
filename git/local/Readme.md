@@ -137,10 +137,6 @@ Open directories, browse file contents. Learn what you can in a minute.
     $ ls -A
     HEAD        config      description hooks       info        objects     refs 
 
-Step 3 : Use what you've learned. You may have noticed the file called
-description. You can describe your repository by opening the description
-file and replacing the text with a name for the repository. Mine will be
-called "Reproducible Science". You may call yours anything you like.
 
 ## git add : Staging Files
 
