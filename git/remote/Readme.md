@@ -40,9 +40,9 @@ fork, others that may be **parallel** to your fork, and so on.
 
 ### Exercise : Fork Our GitHub Repository
 
-While you probably already have a copy of the SWC-bootcamp repository,
-GitHub doesn't know about it yet. You'll need to tell github you want to
-have an official fork of this repository.
+While you may already have a copy of this repository, GitHub doesn't know about 
+it until you've made a fork. You'll need to tell github you want to have an 
+official fork of this repository.
 
 Step 1 : Go to our
 [repository](https://github.com/jiffyclub/scipy-2013-git-testing)
@@ -58,8 +58,8 @@ Step 3 :
 
     $ git remote add upstream https://github.com/jiffyclub/scipy-2013-git-testing.git
     $ git remote -v
-    origin  https://github.com/YOU/scipy-2013-git-testing.git (fetch)
-    origin  https://github.com/YOU/scipy-2013-git-testing.git (push)
+    origin          https://github.com/YOU/scipy-2013-git-testing.git (fetch)
+    origin          https://github.com/YOU/scipy-2013-git-testing.git (push)
     upstream        https://github.com/jiffyclub/scipy-2013-git-testing.git (fetch)
     upstream        https://github.com/jiffyclub/scipy-2013-git-testing.git (push)
 
@@ -114,9 +114,9 @@ exercise, the pull command would be :
     $ git pull upstream
     Already up-to-date.
 
-When there have been remote changes, the pull will apply those changes
-to your local branch, unless there are conflicts with your local
-changes.
+When there have been remote changes, the pull will apply those changes to your 
+local branch. It may require conflict resolution if there are conflicts with 
+your local changes.
 
 ## git push : Sending Your Commits to Remote Repositories
 
@@ -146,10 +146,10 @@ this push to succeed. You're welcome to try it though.
 This is the trickiest part of version control, so let's take it very
 carefully.
 
-In the master code, you'll find a file called Readme.md. This is a
-standard documentation file that appears rendered on the landing page
-for the repository in github. To see the rendered version, visit your
-fork on github, (https://github.com/YOU/scipy-2013-git-testing/tree/master/README.md).
+In the master code, you'll find a file called Readme.md. This is a standard 
+documentation file that appears rendered on the landing page for the repository 
+in github. To see the rendered version, visit your fork on github, 
+(https://github.com/YOU/scipy-2013-git-testing/tree/master/README.md).
 
 For illustration, let's imagine that, suddenly, each of the developers
 on the master code would like to welcome visitors in a language other
@@ -257,14 +257,3 @@ alterations,
     Writing objects: 100% (6/6), 762 bytes, done.
     Total 6 (delta 2), reused 0 (delta 0)
     To git@github.com:username/scipy-2013-git-testing.git
-
-## gitolite
-
-[Gitolite](https://github.com/sitaramc/gitolite) is a way for you to host
-your own multi-user git repositories. I'm not going to go into details
-here, but all you need is a machine with some drive space and network
-access. You can install [minimal
-ubuntu](https://help.ubuntu.com/community/Installation/MinimalCD), then
-sudo apt-get install gitolite will pull in everything you need. At that
-point, your collaborators will only need to send you their public ssh keys
-for you to configure pull and push access to the repos.
