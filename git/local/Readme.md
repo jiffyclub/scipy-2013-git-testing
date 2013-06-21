@@ -149,7 +149,7 @@ create one, then we'll learn the **git add** command.
 
 Step 1 : Create a file to add to your repository.
 
-    $ nano readme.rst &
+    $ touch readme.rst
 
 Step 2 : Inform git that you would like to keep track of future changes
 in this file.
