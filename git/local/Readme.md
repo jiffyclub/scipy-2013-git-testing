@@ -248,15 +248,11 @@ Step 4 : Add a meaningful commit message.
 **Four steps is a lot of steps!!** Command line flags can cut this way down. Some 
 useful flags for git commit include  :
 
-   -m : add a commit message from the command line
-
-   -a : automatically stage files that have been modified or deleted
-
-   -F : add a commit message from a file
-
-   --status : include the output of git status in the commit message
-
-   --amend : fix the commit message at the repository tip
+     -m : add a commit message from the command line
+     -a : automatically stage files that have been modified or deleted
+     -F : add a commit message from a file
+     --status : include the output of git status in the commit message
+     --amend : fix the commit message at the repository tip
 
 **ADVICE: Write good commit messages**
 
