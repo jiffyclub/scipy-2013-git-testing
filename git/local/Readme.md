@@ -258,11 +258,9 @@ useful flags for git commit include  :
 
 ## Exercise : Commit in One Step
 
-Step 1 : Edit your readme file to tell us whose it is.
+Step 1 : Edit your readme file to tell us whose it is. (This is Katy's readme...)
 
-Step 2 : Add, Commit, and append your log Message.
-
-$ git commit -am "This is Katy's readme."
+Step 2 : Add, Commit, and append your log Message with one command.
 
 
 ## git diff : Viewing the Differences
