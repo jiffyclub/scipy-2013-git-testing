@@ -359,7 +359,7 @@ The master branch is created when the repository is initialized. With an
 argument, the **branch** command creates a new branch with the given
 name.
 
-    $ git branch experimentals
+    $ git branch experimental
     $ git branch
     * master
       experimental
@@ -392,31 +392,28 @@ the core or two testing branches may be ready to be combined for further
 integration testing. The method for combining the changes in two
 parallel branches is the **merge** command.
 
-### Exercise : Create and Merge Branches
+### Exercise : Create Two Branches
 
 Step 1 : Create two new branches and list them
 
-    $ git branch first
-    $ git branch second
+    $ git branch us
+    $ git branch texas 
 
-Step 2 : Make changes in each new branch and commit them.
+Step 2 : Add files describing each entity. In the us branch, include at least a 
+file called president, a file called song, and a file called flower. For texas, of 
+course, you'll need a file called governor, a file called song, and a file 
+called bird. You'll probably also want one called flower.
 
-    $ git checkout first
-    Switched to branch 'first'
-    $ touch firstnewfile
-    $ git add firstnewfile
-    $ git commit -am "Added firstnewfile to the first branch."
-    [first 68eba44] Added firstnewfile to first branch.
-     0 files changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 firstnewfile
-    $ git checkout second
+    $ git checkout us
+    Switched to branch 'us'
+    $ touch president
+    $ git add presdient
+    $ git commit -am "Added president to the us branch."
+    $ git checkout texas
     Switched to branch 'second'
-    $ touch secondnewfile
-    $ git add secondnewfile
-    $ git commit -am "Added secondnewfile to the second branch."
-    [second 45dd34c] Added secondnewfile to the second branch.
-     0 files changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 secondnewfile
+    $ touch flower
+    $ git add flower
+    $ git commit -am "Added bluebonnets to the texas branch."
 
 Step 3 : Merge the two branches into the core
 
@@ -425,15 +422,34 @@ Step 3 : Merge the two branches into the core
     $ git merge second
     Merge made by recursive.
      0 files changed, 0 insertions(+), 0 deletions(-)
-      create mode 100644 secondnewfile
+      create mode 100644 flower
     $ git checkout master
     Switched to branch 'master'
     $ git merge first
     Updating 1863aef..ce7e4b5
     Fast-forward
      0 files changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 firstnewfile
-     create mode 100644 secondnewfile
+     create mode 100644 president
+     create mode 100644 flower
+
+## Dealing with Conflicts
+
+We notice that the national anthem isn't there, so we add a file called 
+national_anthem to the us branch.
+
+    $ git checkout us
+    $ touch national_anthem
+    $ git add national_anthem
+    $ git commit -am "Added star spangled banner to the us branch."
+
+Next, of course, we put on our Wranglers and Stetsons and do the same for the Texas branch. 
+   
+    $ git checkout texas
+    $ touch national_anthem
+    $ git add national_anthem
+    $ git commit -am "Added Texas, Our Texas to the texas branch."
+
+If we merge them? What happens?
 
 ## git clone : Copying a Repository
 
