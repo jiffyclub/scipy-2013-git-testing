@@ -120,11 +120,11 @@ your local changes.
 
 ## git push : Sending Your Commits to Remote Repositories
 
-The **git push** command pushes commits in a local working copy to a
-remote repository. The syntax is git push [remote] [local branch].
-Before pushing, a developer should always pull (or fetch + merge), so
-that there is an opportunity to resolve conflicts before pushing to the
-remote.
+The **git push** command pushes commits in a local working copy to a remote 
+repository. The syntax is git push [remote] [local branch]. To push to a 
+differently named remote branch, the syntax is git push [local branch]:[remote 
+branch].  Before pushing, a developer should always pull (or fetch + merge), so 
+that there is an opportunity to resolve conflicts before pushing to the remote.
 
 ### Exercise : Push a change to github
 We'll talk about conflicts later, but first, since we have no conflicts
@@ -180,7 +180,7 @@ commit your changes.
     $ git branch development
     $ git checkout development
     Switched to branch 'development'
-    $ kate Readme.md &
+    $ nano Readme.md 
     <edit the readme file and exit the text editor>
     $ git commit -am "Changed the welcome message to ... "
 
