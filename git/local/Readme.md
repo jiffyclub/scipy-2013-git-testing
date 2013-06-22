@@ -204,7 +204,9 @@ smallest change that remains meaningful.
 Step 1 : Commit the staged changes of the file you've added to your repository.
 
     $ git commit
-
+    [master (root-commit) 9ca8be0] This is my first commit.
+    0 files changed
+    create mode 100644 readme.rst
 
 Step 2 : Add a commit message. Git will send you to your preferred text editor. 
 Create a message, then save and exit.
@@ -308,12 +310,25 @@ you can try :
 A log of the commit messages is kept by the repository and can be
 reviewed with the log command.
 
-    $ git log
-    commit 1863aefd7db752f58226264e5f4282bda641ddb3
-    Author: Joshua Smith <joshua.r.smith@gmail.com>
-    Date:   Wed Feb 8 16:08:08 2012 -0600
 
-        This is the first commit. It adds a readme file.
+    $ git log
+    commit 2e728590b9e7c61b1c52e2c0a66b6273449f1bc3
+    Author: Katy Huff <katyhuff@gmail.com>
+    Date:   Fri Jun 21 18:21:35 2013 -0500
+
+        Explained, this is Katy's readme.
+
+    commit 9a01fdb93efd7c1e52f4da29aa5fa485131aed9b
+    Author: Katy Huff <katyhuff@gmail.com>
+    Date:   Fri Jun 21 18:20:50 2013 -0500
+
+        Added a message.
+
+    commit 9ca8be0222337f3a13a8e96ea9da8ab8fdb2a4e7
+    Author: Katy Huff <katyhuff@gmail.com>
+    Date:   Fri Jun 21 18:19:38 2013 -0500
+
+        This is my first commit.
 
 There are some useful flags for this command, such as
 
@@ -327,21 +342,50 @@ There are some useful flags for this command, such as
     --until=X.minutes/hours/days/weeks/months/years or YY-MM-DD-HH:MM
     --author=<pattern>
 
-## git reset : Unstaging a staged file
+## git reset : Unstaging a Staged File 
+
+You can use git reset to unstage a staged file or to roll back a file or files to a previous revision.
+
+If you added a file to the staging area that you didn't mean to add, you can use reset to take it out of staging.
+
     git reset filename     (opposite of 'git add filename')
 
-## git checkout : Discarding unstaged modifications (git checkout has other purposes)
+## git reset : Return to a previous revision 
+
+If you want to return the repository to a previous version, use reset with the commit number :  
+
+    git reset [<mode>] [<commit>]
+
+Reset has some useful [<mode>] flags.
+
+    --soft : leaves the contents of your files and repository index alone, but resets repository head
+    --mixed : resets the index and repository head, but not the contents of your files
+    --hard : returns the contents of all files and the repository index to the commit specified 
+
+## git checkout : Discarding unstaged modifications
+
     git checkout -- filename     
-    
-## git rm : Removing s file
-   git rm filename   (Removes a file from the repository)
-   
+
+Note, git checkout has other purposes, which we'll see soon.
+
 ### Exercise : 
-    1) Create 5 files in your directory with one line of content in each file.
-    2) Commit the files to the repository.
-    3) Change 2 of the 5 files and commit them.
-    4) Undo the changes in step 3)
-    5) Print out the last entry in the log.
+
+Step 1 : Create 5 files in your directory with one line of content in each file.
+Step 2 : Commit the files to the repository.
+Step 3 : Change 2 of the 5 files and commit them.
+Step 4 : Undo the changes in step 3)
+Step 5 : Print out the last entry in the log.
+
+## git revert : Discard revisions
+
+Much like git reset --hard , but with more permanence, git revert is a helpful tool when you really want to erase history, for example, if you've accidentally committed something with private or proprietary information.
+
+    git revert <commit>
+
+
+## git rm : Removing s file
+
+   git rm filename   (Removes a file from the repository)
     
 ## git branch : Listing, Creating, and Deleting Branches
 
@@ -418,15 +462,15 @@ called bird. You'll probably also want one called flower.
 
 Step 3 : Merge the two branches into the core
 
-    $ git checkout first
-    Switched to branch 'first'
-    $ git merge second
+    $ git checkout us
+    Switched to branch 'us'
+    $ git merge texas
     Merge made by recursive.
      0 files changed, 0 insertions(+), 0 deletions(-)
       create mode 100644 flower
     $ git checkout master
     Switched to branch 'master'
-    $ git merge first
+    $ git merge us
     Updating 1863aef..ce7e4b5
     Fast-forward
      0 files changed, 0 insertions(+), 0 deletions(-)
@@ -443,7 +487,8 @@ national_anthem to the us branch.
     $ git add national_anthem
     $ git commit -am "Added star spangled banner to the us branch."
 
-Next, of course, we put on our Wranglers and Stetsons and do the same for the Texas branch. 
+Next, of course, we put on our Wranglers and Stetsons and do the same for the 
+Texas branch. 
    
     $ git checkout texas
     $ touch national_anthem
@@ -454,8 +499,9 @@ If we merge them? What happens?
 
 ## git clone : Copying a Repository
 
-Yesterday, you checked out a git type repository at
-https://github.com/USERNAME/boot-camps/tree/YYYY-MM-PLACE
+There are a lot of open source code development projects are kept in 
+repositories online and the best way to acquire and keep up to date with those is to 
+'clone' them with git.
 
 When you clone the Original repository, the one that is created on your
 local machine is a copy, and will behave as a fully fledged local
