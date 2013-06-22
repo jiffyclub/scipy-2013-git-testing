@@ -356,7 +356,7 @@ If you want to return the repository to a previous version, use reset with the c
 
     git reset [<mode>] [<commit>]
 
-Reset has some useful [<mode>] flags.
+Reset has some useful mode flags.
 
     --soft : leaves the contents of your files and repository index alone, but resets repository head
     --mixed : resets the index and repository head, but not the contents of your files
