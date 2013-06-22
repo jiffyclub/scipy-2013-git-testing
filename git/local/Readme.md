@@ -371,9 +371,13 @@ Note, git checkout has other purposes, which we'll see soon.
 ### Exercise : 
 
 Step 1 : Create 5 files in your directory with one line of content in each file.
+
 Step 2 : Commit the files to the repository.
+
 Step 3 : Change 2 of the 5 files and commit them.
+
 Step 4 : Undo the changes in step 3)
+
 Step 5 : Print out the last entry in the log.
 
 ## git revert : Discard revisions
