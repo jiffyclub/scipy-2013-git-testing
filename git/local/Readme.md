@@ -513,7 +513,8 @@ local machine is a copy, and will behave as a fully fledged local
 repository locally. However, with the right configuration, it will be
 able to pull changes from collaborators to your local machine and push
 your changes to the Original repository. We'll get to that soon, but for
-now, let's **fork** the repository from GitHub.
+now, let's just clone the repository from GitHub so that you have a local copy 
+that can be kept up to date.
 
 ### Exercise : Cloning a Repository from GitHub
 
