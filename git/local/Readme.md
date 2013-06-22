@@ -451,9 +451,8 @@ Step 1 : Create two new branches and list them
     $ git branch texas 
 
 Step 2 : Add files describing each entity. In the us branch, include at least a 
-file called president, a file called song, and a file called flower. For texas, of 
-course, you'll need a file called governor, a file called song, and a file 
-called bird. You'll probably also want one called flower.
+file called president. For texas, of 
+course, you'll need a file called governor. You'll probably also want one called flower.
 
     $ git checkout us
     Switched to branch 'us'
@@ -461,7 +460,7 @@ called bird. You'll probably also want one called flower.
     $ git add presdient
     $ git commit -am "Added president to the us branch."
     $ git checkout texas
-    Switched to branch 'second'
+    Switched to branch 'texas'
     $ touch flower
     $ git add flower
     $ git commit -am "Added bluebonnets to the texas branch."
