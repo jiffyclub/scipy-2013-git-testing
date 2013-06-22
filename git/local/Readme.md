@@ -382,7 +382,9 @@ Step 5 : Print out the last entry in the log.
 
 ## git revert : Discard revisions
 
-Much like git reset --hard , but with more permanence, git revert is a helpful tool when you really want to erase history, for example, if you've accidentally committed something with private or proprietary information.
+Much like git reset --hard , but with more permanence, git revert is a helpful 
+tool when you **really** want to erase history, for example, if you've 
+accidentally committed something with private or proprietary information.
 
     git revert <commit>
 
