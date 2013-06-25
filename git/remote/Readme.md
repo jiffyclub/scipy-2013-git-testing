@@ -222,7 +222,11 @@ more automatically by the version control system.
 
     Howdy and Willkommen
 
-This results in a status To alert git that you have made appropriate
+This results in a status 
+
+what status
+
+To alert git that you have made appropriate
 alterations,
 
     $ git add Readme.md
