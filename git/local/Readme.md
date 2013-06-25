@@ -2,21 +2,21 @@
 
 ## Example: Wolfman
 
-My friend Lupine Wolfe worked hard on an important project all day. He finished 
-before dinner time, relieved to be ready for the deadline in the morning. The 
-sun set, the full moon rose, and in the morning Lupine awoke with no memory of 
-the previous evening. He sat down at his computer and discovered to his horror 
-that overnight, while transformed as a werewolf, he had replaced all of the code 
-with nonsense. But, Lupine breathed a sigh of relief, because he had been using 
-version control.  He was able to examine the record of his actions overnight and 
-execute one simple command that reverted the code to the state it was in before 
-the moon rose. 
+My friend Lupine Wolfe worked hard on an important project all day. He finished
+before dinner time, relieved to be ready for the deadline in the morning. The
+sun set, the full moon rose, and in the morning Lupine awoke with no memory of
+the previous evening. He sat down at his computer and discovered to his horror
+that overnight, while transformed as a werewolf, he had replaced all of the code
+with nonsense. But, Lupine breathed a sigh of relief, because he had been using
+version control.  He was able to examine the record of his actions overnight and
+execute one simple command that reverted the code to the state it was in before
+the moon rose.
 
 What would happen to your code on a full moon?
 
 ## git : What is Version Control ?
 
-Very briefly, version control is a way to 
+Very briefly, version control is a way to
 
 - keep a backup of changing files
 - store a history of those changes
@@ -33,10 +33,10 @@ suffice.
 
 Version Control System Tool Options
 
-- **Distributed** 
-  - Decentralized CVS (dcvs)  
+- **Distributed**
+  - Decentralized CVS (dcvs)
   - mercurial (hg)
-  - git (git) 
+  - git (git)
   - bazaar (bzr)
 - **Centralized**
   - concurrent versions system (cvs)
@@ -102,17 +102,17 @@ as their descriptions.
      $ git config --global user.email "YOUR EMAIL"
      $ git config --global core.editor "nano"
      $ git config --global color.ui "auto"
-     
+
 ## git init : Creating a Local Repository
 
-To keep track of numerous versions of your work without saving numerous copies, 
+To keep track of numerous versions of your work without saving numerous copies,
 you can make a local **repository** for it on your computer.
 
-What git does is to save 
-the first version, then for each subsequent version it records the difference 
-between the new version and the one before it. With this compact information, 
-git is able to recreate any version on demand by adding the changes to the 
-original in order up to the version of interest.  
+What git does is to save
+the first version, then for each subsequent version it records the difference
+between the new version and the one before it. With this compact information,
+git is able to recreate any version on demand by adding the changes to the
+original in order up to the version of interest.
 
 To create your own local (on your own machine) repository, you must
 initialize the repository with the infrastructure git needs in order to
@@ -136,7 +136,7 @@ Open directories, browse file contents. Learn what you can in a minute.
     .git
     $ cd .git
     $ ls -A
-    HEAD        config      description hooks       info        objects     refs 
+    HEAD        config      description hooks       info        objects     refs
 
 
 ## git add : Staging Files
@@ -196,8 +196,8 @@ In the same way that it is wise to often save a document that you are
 working on, so too is it wise to save numerous revisions of your code.
 More frequent commits increase the granularity of your **undo** button.
 
-There are no hard and fast rules, but good commits are atomic: they are the 
-smallest change that remains meaningful. 
+There are no hard and fast rules, but good commits are atomic: they are the
+smallest change that remains meaningful.
 
 ### Exercise : Commit Your Changes
 
@@ -208,7 +208,7 @@ Step 1 : Commit the staged changes of the file you've added to your repository.
     0 files changed
     create mode 100644 readme.rst
 
-Step 2 : Add a commit message. Git will send you to your preferred text editor. 
+Step 2 : Add a commit message. Git will send you to your preferred text editor.
 Create a message, then save and exit.
 
 Step 3 : Admire your work.
@@ -217,7 +217,7 @@ Step 3 : Admire your work.
     # On branch master
     nothing to commit (working directory clean)
 
-Now, one revision is great, but lots are better. 
+Now, one revision is great, but lots are better.
 
 So far, we've learned that the workflow should be :
 
@@ -241,13 +241,13 @@ This is my readme file.
 
 ```
 
-Step 2 : Stage it for the snapshot (git add) 
+Step 2 : Stage it for the snapshot (git add)
 
 Step 3 : Commit the snapshot (git commit)
 
 Step 4 : Add a meaningful commit message.
 
-**Four steps is a lot of steps!!** Command line flags can cut this way down. Some 
+**Four steps is a lot of steps!!** Command line flags can cut this way down. Some
 useful flags for git commit include  :
 
      -m : add a commit message from the command line
@@ -342,7 +342,7 @@ There are some useful flags for this command, such as
     --until=X.minutes/hours/days/weeks/months/years or YY-MM-DD-HH:MM
     --author=<pattern>
 
-## git reset : Unstaging a Staged File 
+## git reset : Unstaging a Staged File
 
 You can use git reset to unstage a staged file or to roll back a file or files to a previous revision.
 
@@ -350,9 +350,9 @@ If you added a file to the staging area that you didn't mean to add, you can use
 
     git reset filename     (opposite of 'git add filename')
 
-## git reset : Return to a previous revision 
+## git reset : Return to a previous revision
 
-If you want to return the repository to a previous version, use reset with the commit number :  
+If you want to return the repository to a previous version, use reset with the commit number :
 
     git reset [<mode>] [<commit>]
 
@@ -360,15 +360,15 @@ Reset has some useful mode flags.
 
     --soft : leaves the contents of your files and repository index alone, but resets repository head
     --mixed : resets the index and repository head, but not the contents of your files
-    --hard : returns the contents of all files and the repository index to the commit specified 
+    --hard : returns the contents of all files and the repository index to the commit specified
 
 ## git checkout : Discarding unstaged modifications
 
-    git checkout -- filename     
+    git checkout -- filename
 
 Note, git checkout has other purposes, which we'll see soon.
 
-### Exercise : 
+### Exercise :
 
 Step 1 : Create 5 files in your directory with one line of content in each file.
 
@@ -382,17 +382,17 @@ Step 5 : Print out the last entry in the log.
 
 ## git revert : Discard revisions
 
-Much like git reset --hard , but with more permanence, git revert is a helpful 
-tool when you **really** want to erase history, for example, if you've 
+Much like git reset --hard , but with more permanence, git revert is a helpful
+tool when you **really** want to erase history, for example, if you've
 accidentally committed something with private or proprietary information.
 
     git revert <commit>
 
 
-## git rm : Removing s file
+## git rm : Removing a File
 
    git rm filename   (Removes a file from the repository)
-    
+
 ## git branch : Listing, Creating, and Deleting Branches
 
 Branches are parallel instances of a repository that can be edited and
@@ -428,8 +428,8 @@ as well as abandoning local changes.
 
 To switch between branches, try
 
-    $ git branch newbranch 
-    $ git checkout newbranch 
+    $ git branch newbranch
+    $ git checkout newbranch
     $ git branch
 
 How can you tell we've switched between branches? When we used the
@@ -448,10 +448,10 @@ parallel branches is the **merge** command.
 Step 1 : Create two new branches and list them
 
     $ git branch us
-    $ git branch texas 
+    $ git branch texas
 
-Step 2 : Add files describing each entity. In the us branch, include at least a 
-file called president. For texas, of 
+Step 2 : Add files describing each entity. In the us branch, include at least a
+file called president. For texas, of
 course, you'll need a file called governor. You'll probably also want one called flower.
 
     $ git checkout us
@@ -484,7 +484,7 @@ Step 3 : Merge the two branches into the core
 
 ## Dealing with Conflicts
 
-We notice that the national anthem isn't there, so we add a file called 
+We notice that the national anthem isn't there, so we add a file called
 national_anthem to the us branch.
 
     $ git checkout us
@@ -492,9 +492,9 @@ national_anthem to the us branch.
     $ git add national_anthem
     $ git commit -am "Added star spangled banner to the us branch."
 
-Next, of course, we put on our Wranglers and Stetsons and do the same for the 
-Texas branch. 
-   
+Next, of course, we put on our Wranglers and Stetsons and do the same for the
+Texas branch.
+
     $ git checkout texas
     $ touch national_anthem
     $ git add national_anthem
@@ -504,8 +504,8 @@ If we merge them? What happens?
 
 ## git clone : Copying a Repository
 
-There are a lot of open source code development projects are kept in 
-repositories online and the best way to acquire and keep up to date with those is to 
+There are a lot of open source code development projects are kept in
+repositories online and the best way to acquire and keep up to date with those is to
 'clone' them with git.
 
 When you clone the Original repository, the one that is created on your
@@ -513,7 +513,7 @@ local machine is a copy, and will behave as a fully fledged local
 repository locally. However, with the right configuration, it will be
 able to pull changes from collaborators to your local machine and push
 your changes to the Original repository. We'll get to that soon, but for
-now, let's just clone the repository from GitHub so that you have a local copy 
+now, let's just clone the repository from GitHub so that you have a local copy
 that can be kept up to date.
 
 ### Exercise : Cloning a Repository from GitHub
@@ -537,7 +537,7 @@ machine. Let's make sure it worked. Change directories to the source
 code and list the contents.
 
     $ cd Spoon-Knife
-    $ ls 
+    $ ls
 
 ## git pull : Pulling updates from the Original Repository
 
@@ -548,7 +548,7 @@ will ensure you're working with the most up-to-date version of the
 repository. Updating won't overwrite any changes you've made locally
 without asking, so don't get nervous. When in doubt, update.
 
-    $ git pull 
+    $ git pull
     Already up-to-date.
 
 Since we just pulled the repository down, we will be up to date unless
