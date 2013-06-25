@@ -174,8 +174,20 @@ ready for production.
 
 ### Exercise : Experience a Conflict
 
-Step 1 : Make a new branch, edit the readme file in that branch, and
-commit your changes.
+Step 1 : Make a new branch 
+Step 2 : Edit the readme file in that branch,
+Step 3 : and commit your changes.
+Step 4 : Mirror the remote upstream repository in your master branch 
+by pulling down my changes
+Step 5 : You want to push it to the internet eventually, so you merge updates 
+from development, but may experience a conflict.
+
+
+
+
+
+
+(solution... if you're stuck.)
 
     $ git branch development
     $ git checkout development
@@ -183,18 +195,10 @@ commit your changes.
     $ nano Readme.md 
     <edit the readme file and exit the text editor>
     $ git commit -am "Changed the welcome message to ... "
-
-Step 2 : Mirror the remote upstream repository in your master branch 
-by pulling down my changes
-
     $ git checkout master
     Switched to branch 'master'
     $ git fetch upstream
     $ git merge upstream/master
-
-Step 3 : You want to push it to the internet eventually, so you pull
-updates from the upstream repository, but will experience a conflict.
-
     $ git merge development
     Auto-merging Readme.md
     CONFLICT (content): Merge conflict in Readme.md
