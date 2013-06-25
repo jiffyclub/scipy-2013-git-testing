@@ -57,7 +57,6 @@ def read_animals(filename):
 
     return dates, times, species, counts
 
-
 def mean(nums):
     """
     Calculates the mean of a list of numbers.
@@ -71,7 +70,13 @@ def mean(nums):
     m : number
 
     """
-    # fill this in
+    avg=None
+    if len(nums):
+        avg=float(sum(nums))/len(nums)
+    else:
+        print 'error empty list'
+    return avg
+        
 
 
 def filter_animals_by_kind(kind, date, time, species, count):
