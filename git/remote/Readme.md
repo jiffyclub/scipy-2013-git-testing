@@ -172,7 +172,7 @@ master branch of their local fork to track other developers changes in the
 remote repository until their own local development branch changes are
 ready for production.
 
-### Exercise : Experience a Conflict
+### Exercise : Experience a Conflict *
 
 Step 1 : Make a new branch 
 
@@ -186,21 +186,6 @@ by pulling down my changes
 Step 5 : You want to push it to the internet eventually, so you merge updates 
 from development, but may experience a conflict.
 
-
-    $ git branch development
-    $ git checkout development
-    Switched to branch 'development'
-    $ nano Readme.md 
-    <edit the readme file and exit the text editor>
-    $ git commit -am "Changed the welcome message to ... "
-    $ git checkout master
-    Switched to branch 'master'
-    $ git fetch upstream
-    $ git merge upstream/master
-    $ git merge development
-    Auto-merging Readme.md
-    CONFLICT (content): Merge conflict in Readme.md
-    Automatic merge failed; fix conflicts and then commit the result.
 
 ## git resolve : Resolving Conflicts
 
@@ -259,3 +244,21 @@ alterations,
     Writing objects: 100% (6/6), 762 bytes, done.
     Total 6 (delta 2), reused 0 (delta 0)
     To git@github.com:username/scipy-2013-git-testing.git
+
+
+## * Solution to the conflict exercise
+
+    $ git branch development
+    $ git checkout development
+    Switched to branch 'development'
+    $ nano Readme.md 
+    <edit the readme file and exit the text editor>
+    $ git commit -am "Changed the welcome message to ... "
+    $ git checkout master
+    Switched to branch 'master'
+    $ git fetch upstream
+    $ git merge upstream/master
+    $ git merge development
+    Auto-merging Readme.md
+    CONFLICT (content): Merge conflict in Readme.md
+    Automatic merge failed; fix conflicts and then commit the result.
