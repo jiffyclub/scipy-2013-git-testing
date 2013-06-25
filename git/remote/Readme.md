@@ -5,7 +5,7 @@
 GitHub is a site where many people store their open (and closed) source
 code repositories. It provides tools for browsing, collaborating on and
 documenting code. Your home institution may have a repository hosting
-system of it's own. To find out, ask your system administrator.  GitHub,
+system of its own. To find out, ask your system administrator.  GitHub,
 much like other forge hosting services (
 [launchpad](https://launchpad.net), [bitbucket](https://bitbucket.org),
 [googlecode](http://code.google.com), [sourceforge](http://sourceforge.net)
@@ -111,7 +111,7 @@ than fetching and merging as it automates the branch matching.
 Specificially, to perform the same task as we did in the previous
 exercise, the pull command would be :
 
-    $ git pull upstream
+    $ git pull upstream master
     Already up-to-date.
 
 When there have been remote changes, the pull will apply those changes to your 
