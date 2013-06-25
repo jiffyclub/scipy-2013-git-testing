@@ -105,10 +105,10 @@ Step 3 : Find out what happened by browsing the directory.
 ## git pull : Pull = Fetch + Merge
 
 The command **git pull** is the same as executing **git fetch** followed
-by **git merge**. Though it is not recommened for cases in which there
+by **git merge**. Though it is not recommended for cases in which there
 are many branches to consider, the pull command is shorter and simpler
 than fetching and merging as it automates the branch matching.
-Specificially, to perform the same task as we did in the previous
+Specifically, to perform the same task as we did in the previous
 exercise, the pull command would be :
 
     $ git pull upstream master
@@ -134,7 +134,7 @@ your fork, the "origin."
     $ git push origin master
 
 If you have permission to push to the upstream repository, sending
-commits to that remote is exactly analagous.
+commits to that remote is exactly analogous.
 
     $ git push upstream master
 
