@@ -22,12 +22,12 @@ Very briefly, version control is a way to
 - store a history of those changes
 - and manage merging of changes in versions with different change sets.
 
-There are a lot of verson control systems. Wikipedia
+There are a lot of version control systems. Wikipedia
 provides both a nice vocabulary list and a fairly complete table of some
 popular version control systems and their equivalent commands.
 
 Today, we'll be using git. Git is an example of a distributed version
-control system, distinct from centralized verson control systems. I'll
+control system, distinct from centralized version control systems. I'll
 make the distinction clear later, but for now, the list below will
 suffice.
 
@@ -116,7 +116,7 @@ original in order up to the version of interest.
 
 To create your own local (on your own machine) repository, you must
 initialize the repository with the infrastructure git needs in order to
-keep a record of things within the repsitory that you're concerned
+keep a record of things within the repository that you're concerned
 about. The command to do this is **git init** .
 
 ### Exercise : Create a Local Repository
@@ -389,7 +389,7 @@ accidentally committed something with private or proprietary information.
     git revert <commit>
 
 
-## git rm : Removing s file
+## git rm : Removing files
 
    git rm filename   (Removes a file from the repository)
     
