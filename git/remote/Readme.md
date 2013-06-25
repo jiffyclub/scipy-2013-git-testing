@@ -225,9 +225,18 @@ more automatically by the version control system.
 This results in a status 
 
 what status
+    # On branch master
+    # Unmerged paths:
+    #   (use "git add/rm <file>..." as appropriate to mark resolution)
+    #
+    # both modified:      readme.rst
+    #
+    ...
+    no changes added to commit (use "git add" and/or "git commit -a")
 
-To alert git that you have made appropriate
-alterations,
+
+To alert git that you have made appropriate alterations, follow the instructions 
+it gave you in the status message :
 
     $ git add Readme.md
     $ git commit
