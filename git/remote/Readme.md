@@ -175,19 +175,17 @@ ready for production.
 ### Exercise : Experience a Conflict
 
 Step 1 : Make a new branch 
+
 Step 2 : Edit the readme file in that branch,
+
 Step 3 : and commit your changes.
+
 Step 4 : Mirror the remote upstream repository in your master branch 
 by pulling down my changes
+
 Step 5 : You want to push it to the internet eventually, so you merge updates 
 from development, but may experience a conflict.
 
-
-
-
-
-
-(solution... if you're stuck.)
 
     $ git branch development
     $ git checkout development
