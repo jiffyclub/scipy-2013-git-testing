@@ -55,7 +55,7 @@ def read_animals(filename):
 
     f.close()
 
-    return dates, times, counts, species
+    return dates, times, species, counts
 
 
 def mean(nums):
