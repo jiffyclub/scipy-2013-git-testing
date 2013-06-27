@@ -55,8 +55,7 @@ def read_animals(filename):
 
     f.close()
 
-    return dates, times, counts, species
-
+    return dates, times, species, counts
 
 def mean(nums):
     """
@@ -71,7 +70,13 @@ def mean(nums):
     m : number
 
     """
-    # fill this in
+    avg=None
+    if len(nums):
+        avg=float(sum(nums))/len(nums)
+    else:
+        print 'error empty list'
+    return avg
+
 
 
 def filter_animals_by_kind(kind, date, time, species, count):
@@ -96,4 +101,16 @@ def filter_animals_by_kind(kind, date, time, species, count):
     filtered_count : list of int
 
     """
-    # fill this in
+    fdate = []
+    ftime = []
+    fspecies = []
+    fcount = []
+
+    for i in range(len(date)):
+        if species[i] == kind:
+            fdate.append(date[i])
+            ftime.append(time[i])
+            fspecies.append(species[i])
+            fcount.append(count[i])
+
+    return fdate, ftime, fspecies, fcount
